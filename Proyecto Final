@@ -3,3 +3,12 @@ Requisitos:
 * Desarrollar una aplicación desktop para base de datos con Oracle
   - Una aplicación única!!
   - De 2 a 3 tablas
+
+Pasos para crear proyecto:
+
+1.- File / New Project / NetBeans Modules / NetBeans Platform Application
+2.- Modules / Add New / Code Name Base: (org.unitec.musica)
+3.- moduloInterfaz / New / Window / Window Position: (editor), Check: (Open on Application Start, Closing not allowed)
+
+3 íconos (16x16, 32x32 y 48x48 .ico)
+Splash Screen (600x390 .png)
