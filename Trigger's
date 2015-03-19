@@ -1,0 +1,40 @@
+Tema de CENEVAL!!
+
+Trigger: Es un objeto de Base de Datos que se ejecuta automáticamente sin ser llamado por el usuario y opera unica y
+exclusivamente bajo algún cambio en la base de datos.
+
+Se dividen en:
+  DML (Data Manipulator Languaje): Opera a nivel de insert, update, delete
+    Before: Validaciones
+    After: Automatización
+  DDL (Data Description Languaje): A nivel administrativo
+  
+CREATE TABLE usuario_xxx (idu INTEGER, edad INTEGER);
+
+CREATE OR REPLACE TRIGGER disparador_xxx BEFORE INSERT ON usuario_xxx FOR EACH ROW
+BEGIN
+IF :NEW.edad < 18 THEN
+RAISE_APPLICATION_ERROR(-20001,'Lo siento, eres un pequeño pervertido');
+END IF;
+END;
+/
+
+INSERT INTO usuario_xxx VALUES(1,15);
+
+SELECT * FROM usuario_xxx;
+
+
+
+CREATE TABLE trabajador (idt INTEGER, nombre VARCHAR2(120), sueldo FLOAT);
+
+INSERT INTO trabajador VALUES (1,'Ana',4000);
+
+CREATE OR REPLACE TRIGGER actualizar_trabajador BEFORE UPDATE ON trabajador FOR EACH ROW
+BEGIN
+:NEW.sueldo := :OLD.sueldo + :NEW.sueldo;
+END;
+/
+
+UPDATE trabajador SET sueldo = 1000 WHERE idt = 1;
+
+SELECT * FROM trabajador;
