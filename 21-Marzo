@@ -1,0 +1,5 @@
+DRIVER: COnjunto de programas prefabricados que nos ayudan a conectar un clientea una base de datos
+
+1.- Diseño de base de datos para insertar película
+2.- En la interfaz de usuario para el software cargar el driver correspondiente a la base de datos
+3.- Probar que se conecta a Oracle nuestra ingerfaz
